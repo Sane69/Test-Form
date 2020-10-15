@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <form class="form" id="form">
+            <div class="form__tabs">
+                <a class="form__link form__link--active" href="#">01 Customer Info</a>
+                <a class="form__link" id="form__link--shipp" href="#">02 Shipping Info</a>
+                <a class="form__link" href="#">03 Payment Selection</a>
+            </div>
+            <div class="form__title">
+                <h1>Customer information</h1>
+            </div>
+            <div class="form__group">
+                <div class="form__group--block">
+                    <label class="form-check-label">First name</label>
+                    <input type="text" onKeyup="checkform()" id="nameOne" name="name" class="form-check" data-validate-field="name">
+                </div>
+                <div class="form__group--block">
+                    <label class="form-check-label">First name</label>
+                    <input type="text" onKeyup="checkform()" id="nameTwo" name="name" class="form-check" data-validate-field="Fname">
+                </div>
+            </div>
+            <div class="form__address">
+                <label>Address</label>
+                <input type="text" name="address">
+            </div>
+            <div class="form__group form__group--country">
+                <div class="form__group--block">
+                    <label>Country</label>
+                    <select>
+                        <option>Select your Country</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United States">United States</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Deutschland">Deutschland</option>
+                    </select>
+                </div>
+                <div class="form__group--block">
+                    <label>City</label>
+                    <select>
+                        <option>Kryviy Rig</option>
+                        <option value="Kyiv">Kyiv</option>
+                        <option value="Chernihiv">Chernihiv</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Kharkiv">Kharkiv</option>
+                        <option value="Dnipro">Dnipro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="form__group--block form__group--blockCode">
+                    <label>Postal Code</label>
+                    <input type="number" name="number">
+                    <button type="button">Find</button>
+                </div>
+                <div class="form__group--block">
+                    <label class="form-check-label">Phone</label>
+                    <input type="tel" onKeyup="checkform()" name="tel" id="phone" class="form-check" data-validate-field="tel">
+                </div>
+            </div>
+            <div class="form__send">
+                <a href="#">Return to shop</a>
+                <div class="form__send--btn">
+                    <button id="button" type="submit">Continue To Shipping</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="form__ship" id="formShip">
+            <div class="form__tabs">
+                <a class="formShip__link" id="formShip__link--back" href="#">01 Customer Info</a>
+                <a class="formShip__link formShip__link--active" href="#">02 Shipping Info</a>
+                <a class="formShip__link" href="#">03 Payment Selection</a>
+            </div>
+            <div class="form__title">
+                <h1>Shipping information</h1>
+            </div>
+            <div class="form__info">
+                <div class="form__info--address">
+                    <p>Taras Shevchenko</p>
+                    <p>Unit 2 Green Mount Park</p>
+                    <p>Halifax</p>
+                    <p>HX1 5QN</p>
+                    <p>Phone: +3 8097 132-45-67</p>
+                    <div class="form__info--addressLink">
+                        <a href="#">Edit Address</a>
+                        <a href="#">Add New</a>
+                    </div>
+                </div>
+                <div class="form__info--map">
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12099.774787664423!2d-73.94986586614597!3d40.69723763787348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bf6d803080f%3A0x8f643873d078aae1!2z0KHQsNC80L3QtdGAINCl0LDRg9C30LXRgSwg0JHRgNGD0LrQu9C40L0sINCd0YzRji3QmdC-0YDQuiAxMTIwNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1602625495549!5m2!1sru!2sua" width="700" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+                </div>
+            </div>
+            <div class="form__title">
+                <h1>Shipping Method</h1>
+            </div>
+            <div class="form__method">
+                <div class="form__method--block">
+                    <div class="form__method--blockInfo">
+                        <label class="form__method--label"><input type="radio" name="radio" checked/>
+                            <div class="form__method--Flex">
+                                Standart Delivery <span class="form__method--blockFree">Free</span>
+                            </div>
+                            <div class="form__method--blockText">
+                                Freebie checkout form of the third step in sketchapp. Feel free to download and use it for your project. 
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                    <div class="form__method--block">
+                        <div class="form__method--blockInfo">
+                            <label class="form__method--label"><input type="radio" name="radio"/>
+                                <div class="form__method--Flex">
+                                    Fast Delivery <span class="form__method--blockPrice">8.00 uah</span>
+                                </div>
+                                <div class="form__method--blockText">
+                                    Freebie checkout form of the third step in sketchapp. Feel free to download and use it for your project. 
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            <div class="form__send">
+                <a id="form__send--back" href="#">Back to Customer Info</a>
+                <div class="form__send--btn">
+                    <button id="button" type="submit">Continue To Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

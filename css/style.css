@@ -1,0 +1,518 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1450px;
+    padding: 0 20px;
+}
+.form {
+    margin-top: 120px;
+}
+.form.active {
+    display: none;
+}
+.form__tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(212, 217, 221);
+}
+.form__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 60px;
+    font-size: 27px;
+    color: #d4d9dd;
+    width: 475px;
+    text-align: center;
+    font-weight: 600;
+}
+.form__link--active {
+    color: #3a3f42;
+    border-bottom: 2px solid #3a3f42;
+}
+.form__link:hover {
+        color: #3a3f42;
+        border-bottom: 2px solid #3a3f42;
+}
+.formShip__link {
+       text-decoration: none;
+       text-transform: uppercase;
+       padding-bottom: 60px;
+       font-size: 27px;
+       color: #d4d9dd;
+       width: 475px;
+       text-align: center;
+       font-weight: 600;
+}
+.formShip__link--active {
+    color: #3a3f42;
+    border-bottom: 2px solid #3a3f42;
+}
+
+.formShip__link:hover {
+    color: #3a3f42;
+    border-bottom: 2px solid #3a3f42;
+}
+.form__title {
+    margin-top: 200px;
+    margin-bottom: 110px;
+}
+.form__title h1 {
+    font-size: 50px;
+    color: #1b2125;
+    font-weight: 400;
+}
+.form__group {
+    display: flex;
+    justify-content: space-between;
+}
+.form__group input {
+    border-width: 2px;
+    border-color: rgb(212, 217, 221);
+    border-style: solid;
+    border-radius: 3px;
+    width: 687px;
+    height: 105px;
+    font-size: 24px;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #1b2125;
+    outline: none;
+}
+.form-check.active {
+    border-color: red;
+}
+.form__group--block {
+    display: flex;
+    flex-direction: column;
+}
+.form-check-label.active {
+    color: red;
+}
+.form__group label {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #d4d9dd;  
+}
+.form__group--block label {
+    font-size: 24px;
+    color: #d4d9dd;
+}
+.form__address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.form__address input {
+    border-width: 2px;
+    border-color: rgb(212, 217, 221);
+    border-style: solid;
+    border-radius: 3px;
+    width: 100%;
+    height: 105px;
+    font-size: 24px;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #1b2125;
+    outline: none;
+}
+.form__address label {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #d4d9dd;
+}
+.form__group select {
+    border-width: 2px;
+    border-color: rgb(212, 217, 221);
+    border-style: solid;
+    border-radius: 3px;
+    width: 687px;
+    height: 105px;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-size: 31px;
+    color: #788995;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.form__group--country {
+    margin-bottom: 70px;
+}
+.form__group--block input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.form__group--blockCode {
+    position: relative;
+}
+.form__group--block button {
+    position: absolute;
+    top: 50px;
+    right: 2px;
+    background-color: #fff;
+    border-left: 2px solid rgb(221, 227, 232);;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #0095f8;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
+    height: 102px;
+    width: 140px;
+}
+.form__group--block button:hover {
+    background-color: #0095f8;
+    color: #fff;
+}
+.form__send {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form__send a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #7e8e99;
+}
+.form__send a:hover {
+    text-decoration: underline;
+}
+.form__send button {
+    background-color: #0077e2;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #0077e2;
+    padding: 45px 85px 45px 95px;
+    transition: 0.5s;
+}
+.form__send button:hover {
+    color: #0077e2;
+    background-color: #fff;
+    border: 1px solid #0077e2;
+}
+.js-validate-error-field {
+    color: red!important;
+    border: 2px solid red!important;
+}
+.js-validate-error-label {
+    display: none;
+}
+
+/* Form Shipping Info */
+
+.form__ship {
+    margin-top: 120px;
+    display: none;
+}
+.form__ship.active {
+    display: block;
+}
+.form__info {
+    border-width: 2px;
+    border-color: rgb(212, 217, 221);
+    border-style: solid;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.form__info--map {
+    border-left: 1px solid rgb(212, 217, 221);
+}
+.form__info--address {
+    padding: 70px;
+}
+.form__info--address p {
+    font-size: 30px;
+    color: #5e666c;
+    margin-bottom: 20px;
+}
+.form__info--addressLink a {
+    font-size: 27px;
+    color: #0095f8;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 50px;
+}
+.form__info--addressLink a:last-child {
+    margin-right: 0;
+}
+.form__info--addressLink a:hover {
+    text-decoration: underline;
+}
+.form__method {
+    display: flex;
+    justify-content: space-between;
+}
+.form__method--label {
+    font-size: 30px;
+    color: #212121;
+}
+.form__method--blockFree {
+    font-size: 30px;
+    color: #212121;
+    font-weight: 600;
+    margin-left: 200px;
+}
+.form__method--blockPrice {
+    font-size: 30px;
+    color: #212121;
+    margin-left: 200px;
+}
+.form__method--blockText {
+    font-size: 28px;
+    color: #9b9fa3;
+    margin-top: 45px;
+    margin-left: 75px;
+}
+.form__method--blockInfo {
+    display: flex;
+    justify-content: space-between;
+}
+.form__method--block input {
+    width: 28px;
+    height: 28px;
+}
+.form__method--blockInfo label {
+    padding: 70px;
+    cursor: pointer;
+}
+.form__method--block {
+    border-width: 3px;
+    border-color: rgb(212, 217, 221);
+    border-style: solid;
+    border-radius: 3px;
+}
+.form__method--block:hover {
+-webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+}
+.form__method--Flex {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35px;
+}
+
+/* Media */
+
+@media (max-width: 1500px) {
+    .container {
+        max-width: 1230px;
+    }
+    .form__group input {
+        width: 580px;
+        height: 70px;
+        margin-top: 10px;
+    }
+    .form__group select {
+        width: 580px;
+        height: 70px;
+        font-size: 18px;
+    }
+    .form__address input {
+        height: 70px;
+        margin-top: 10px;
+    }
+    .form__link {
+        font-size: 17px;
+    }
+    .formShip__link {
+        font-size: 17px;
+    }
+    .form__title {
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    .form__title h1 {
+        font-size: 30px;
+    }
+    .form__group--block label {
+        font-size: 18px;
+    }
+    .form__address {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .form__address label {
+        font-size: 18px;
+    }
+    .form__group--block button {
+        top: 33px;
+        height: 67px;
+        width: 120px;
+        font-size: 18px;
+    }
+    .form__send button {
+        font-size: 17px;
+        padding: 30px 60px;
+    }
+    .form__send a {
+        font-size: 24px;
+    }
+    .form__group--country {
+        margin-bottom: 30px;
+    }
+    .form__send {
+        margin-top: 30px;
+    }
+    iframe {
+        height: 510px;
+    }
+    .form__method--blockFree {
+        margin-left: 100px;
+    }
+    .form__method--blockPrice {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form__group {
+        flex-direction: column;
+    }
+    .form__group--block {
+        margin-top: 20px;
+    }
+    .form__group input {
+        width: 100%;
+    }
+    .form__group select {
+        width: 100%;
+    }
+    .form__send {
+        margin-bottom: 50px;
+    }
+    .form__info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form__method {
+        flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    .form__link:nth-child(2),
+    .form__link:nth-child(3) {
+        display: none;
+    }
+    .formShip__link:nth-child(1),
+    .formShip__link:nth-child(3) {
+        display: none;
+    }
+    .form__send {
+        flex-direction: column-reverse;
+    }
+    .form__send--btn {
+        margin-top:30px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .form__send button {
+        width: 100%;
+        font-size: 16px;
+    }
+    .form__send a {
+        font-size: 18px;
+    }
+    .form__info--address {
+        padding: 50px;
+    }
+    .form__info--address p {
+        font-size: 24px;
+    }
+    .form__info--addressLink a {
+        font-size: 22px;
+    }
+    .form__method--blockInfo label {
+        padding: 40px;
+    }
+    .form__method--Flex {
+        font-size: 24px;
+    }
+    .form__method--blockFree {
+        font-size: 20px;
+    }
+    .form__method--blockText {
+        font-size: 22px;
+    }
+    iframe {
+        width: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    .form__method--block input {
+        width: 18px;
+        height: 18px;
+    }
+    .form__method--Flex {
+        font-size: 16px;
+        margin-top: -25px;
+    }
+    .form__method--blockFree {
+        font-size: 14px;
+    }
+    .form__method--blockText {
+        margin-left: 0;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+    .form__method--blockPrice {
+        font-size: 14px;
+    }
+    .form__info--address {
+        padding: 20px;
+    }
+    .form__info--address p {
+        font-size: 14px;
+    }
+    .form__info--addressLink a {
+        font-size: 14px;
+    }
+    iframe {
+        height: 300px;
+        width: 270px;
+    }
+}
+@media (max-width: 420px) {
+    .form__method--blockInfo label {
+        padding: 20px;
+    }
+    .form__method--blockFree {
+        margin-left: 20px;
+    }
+    .form__method--blockPrice {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .form__send button {
+        font-size: 13px;
+    }
+}
